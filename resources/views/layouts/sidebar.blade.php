@@ -143,4 +143,10 @@
         </li>
         @endif
     </ul>
+    <p class="text-center mt-3">
+        &copy; 
+        <a href="https://github.com/rachidlharime" style="color: #cccccc" target="_blank">
+            Rachid L'harime
+        </a>
+    </p>
 </nav>

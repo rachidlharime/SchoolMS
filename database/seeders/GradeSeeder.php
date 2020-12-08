@@ -21,12 +21,6 @@ class GradeSeeder extends Seeder
             'teacher_id'=>1,
             'grade'=>18,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s') ],
-            ['student_id'=>2,
-            'subject_id'=>2,
-            'teacher_id'=>1,
-            'grade'=>15,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s') ]
         ]);
     }

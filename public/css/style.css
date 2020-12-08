@@ -9,7 +9,6 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999
 }
 
 a,
@@ -46,7 +45,7 @@ a:focus {
     top: 0;
     left: 0;
     height: 100vh;
-    z-index: 9;
+    z-index: 15;
     background: #005086;
     color: #fff;
     overflow-y: auto;

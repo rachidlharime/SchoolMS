@@ -36,10 +36,5 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login', ['title'=>'SchoolMS - Login']);
         });
-
-        Fortify::registerView(function () {
-            return view('auth.register', ['title'=>'SchoolMS - Register']);
-        });
-
     }
 }

@@ -38,8 +38,20 @@
                     </form>
                 </div>
             </div>
+            
+            <p class="text-center mt-3">
+                &copy; 
+                <a href="https://github.com/rachidlharime/SchoolMS" class="text-primary" target="_blank">
+                    Rachid L'harime
+                </a>
+            </p>
+            <p class="text-center">
+                See the docs 
+                <a href="https://github.com/rachidlharime" class="text-primary" target="_blank">here</a>
+            </p>
         </div>
     </div>
+    
 </div>
     
 @endsection

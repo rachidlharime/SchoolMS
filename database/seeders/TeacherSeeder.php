@@ -16,18 +16,12 @@ class TeacherSeeder extends Seeder
     public function run()
     {
         Teacher::insert( [
-            ['first_name'=>'mark',
-            'last_name'=>'noble',
+            ['first_name'=>'john',
+            'last_name'=>'doe',
             'subject_id'=>2,
             'added_by'=>1,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
-            ['first_name'=>'meryl',
-            'last_name'=>'hawk',
-            'subject_id'=>1,
-            'added_by'=>1,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s') ]
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')]
         ]);
     }
 }
