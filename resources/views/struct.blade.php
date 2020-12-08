@@ -16,6 +16,10 @@
             table td {
                 vertical-align: middle !important;
             }
+            .modal {
+                z-index: 999999999 !important;
+            }
+
         </style>
 
     </head>
@@ -34,21 +38,45 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ route('logout') }}" 
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                 {{ Auth::user()->username.' | ' }}
                                 {{ (Auth::user()->isAdmin !== null) ? 'Admin' : '' }}
                                 {{ (Auth::user()->isTeacher !== null) ? 'Teacher' : '' }}
                                 {{ (Auth::user()->isStudent !== null) ? 'Student' : '' }}
-                                <i class="fas fa-sign-out-alt ml-2"></i>
                             </a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item text-danger" 
+                                    data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>
+                                    Logout
+                                </a>
+                            </div>
                         </li>
                     </ul>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
                 </nav>
+
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                You're logging out . Are you sure ?
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                            <a href="{{ route('logout') }}" class="btn btn-primary"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">Confirm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="container mt-5">
 
@@ -73,20 +101,7 @@
         <script src={{asset('js/validate.js')}}></script>
 
         <script>
-                // function filter(){
-
-                //     var xmlhttp = new XMLHttpRequest();
-                //     // xmlhttp.onreadystatechange = function() {
-                //     //     if (this.readyState == 4 && this.status == 200) {
-                //     //         // document.getElementById("txtHint").innerHTML = this.responseText;
-                //     //     }
-                //     // };
-                //     // xmlhttp.open("GET", $('#filterForm').attr('action')+'/'+this.value );
-                //     // xmlhttp.send();
-
-                //     console.log($('#filterForm').attr('action')+'/'+this.value)
-                // }
-
+                
         </script>
         
     </body>

@@ -9,8 +9,8 @@
 
         <link rel="stylesheet" href={{asset('bootstrap/bootstrap.css')}}>
         <link rel="stylesheet" href={{asset('fontawesome/css/all.css')}}>
-        {{-- <link rel="stylesheet" href={{asset('css/style.css')}}> --}}
-
+        <link rel="stylesheet" href={{asset('css/style.css')}}>
+        
     </head>
     <body>
 

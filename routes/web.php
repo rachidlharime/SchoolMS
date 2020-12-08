@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function(){
     
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::get('/teachers/{subject?}', [TeacherController::class, 'index'])->name('teachers')->middleware('admin');
+    Route::get('/teachers', [TeacherController::class, 'index'])->name('teachers')->middleware('admin');
 
     Route::get('/teachers/new', [TeacherController::class, 'form'])->middleware('admin');
     
