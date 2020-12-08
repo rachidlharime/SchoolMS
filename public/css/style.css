@@ -1,0 +1,172 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s
+}
+
+.navbar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999999;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    border: none
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #005086;
+    color: #fff;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+/* background: #008664;
+    background: #da8f1e; */
+
+#sidebar.active {
+    margin-left: -250px
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar ul p {
+    padding: 10px;
+    font-size: 15px;
+    display: block;
+    color: #fff
+}
+
+
+#sidebar ul li a {
+    padding: 15px 10px;
+    font-size: 1.1em;
+    display: block
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #014069
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+}
+
+#sidebar ul li a[data-toggle="collapse"] {
+    position: relative
+}
+
+#sidebar ul li .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%)
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding: 10px 10px 10px 30px !important;
+}
+
+#sidebarCollapse {
+    position: fixed;
+    top: 15px;
+    left: 265px;
+    z-index: 999999999;
+    background-color: #005086;
+    border: none;
+    transition: all 0.3s;
+}
+#sidebarCollapse.active {
+    left: 15px;
+}
+#sidebarCollapse .fa-times {
+    display: none;
+}
+
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content.active {
+    width: 100%;
+}
+
+.content-wrapper {
+    padding: 15px
+}
+
+@media(max-width:768px) {
+
+    #content {
+        width: 100%
+    }
+
+    #content.active {
+        width: 100%;
+    }
+
+    #sidebarCollapse {
+        left: 230px;
+        outline: none !important;
+    }
+    #sidebarCollapse .fa-times {
+        display: block;
+    }
+    #sidebarCollapse .fa-align-justify {
+        display: none;
+    }
+    #sidebarCollapse.active {
+        left: 15px;
+        outline: none !important;
+    }
+    #sidebarCollapse.active .fa-times {
+        display: none;
+    }
+    #sidebarCollapse.active .fa-align-justify {
+        display: block;
+    }
+    
+}
