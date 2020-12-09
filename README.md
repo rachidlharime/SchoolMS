@@ -1,6 +1,6 @@
 A Laravel school management system web application .
 
-before you start the application rename the .env.example to .env, then create a database with the name 'laravel'.
+before you start the application rename the `.env.example` to `.env` , then create a database with the name `laravel`.
 
 run these commands :
 
