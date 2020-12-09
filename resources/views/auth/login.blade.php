@@ -7,7 +7,7 @@
         <div class="col-lg-6 m-auto">
             <div class="card mt-5">
                 <div class="card-header">
-                    <h3>Login</h3>
+                    <h3>Connect</h3>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
