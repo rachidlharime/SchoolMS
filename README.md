@@ -4,27 +4,27 @@ before you start the application rename the .env.example to .env, then create a 
 
 run these commands :
 
-composer update
+`composer update`
 
-php artisan key:generate
+`php artisan key:generate`
 
-php artisan migrate
+`php artisan migrate`
 
-php artisan db:seed
+`php artisan db:seed`
 
-Admin account :
+## Admin account :
 
 username : loremipsum
 
 password : lorem123
 
-Teacher account :
+## Teacher account :
 
 username : johndoe
 
 password : john123
 
-Student account :
+## Student account :
 
 username : jdoe
 
